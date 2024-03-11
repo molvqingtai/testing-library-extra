@@ -50,9 +50,9 @@ userEvent.click(dialogButton)
 
 const dialog = await findBySelector(document.body, '.dialog', { timeout: 1000 })
 
-const usernameInput = getBySelector(dialog, '.dialog form input[name="username"]')
-const passwordInput = getBySelector(dialog, '.dialog form input[name="password"]')
-const loginButton = getBySelector(dialog, '.dialog form button[type="submit"]')
+const usernameInput = getBySelector(dialog, 'form input[name="username"]')
+const passwordInput = getBySelector(dialog, 'form input[name="password"]')
+const loginButton = getBySelector(dialog, 'form button[type="submit"]')
 
 userEvent.type(usernameInput, 'admin')
 userEvent.type(passwordInput, 'abc123')
