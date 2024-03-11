@@ -49,5 +49,5 @@ jobs:
       - run: pnpm run build
       - run: pnpx semantic-release
         env:
-          GH_TOKEN: ${{ secrets.BY_CLASS_GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.BY_CLASS_NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.TESTING_LIBRARY_EXTRA_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.TESTING_LIBRARY_EXTRA_NPM_TOKEN }}
