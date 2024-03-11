@@ -21,8 +21,21 @@ jobs:
       - run: pnpm install --ignore-scripts
       - run: pnpm run lint
       - run: pnpm run tsc
-  release:
+  tests:
     needs: linter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: lts/*
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: latest
+      - run: pnpm install --ignore-scripts
+      - run: pnpm run test
+  release:
+    needs: tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -36,5 +49,5 @@ jobs:
       - run: pnpm run build
       - run: pnpx semantic-release
         env:
-          GH_TOKEN: ${{ secrets.EVENT_HUB_GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.EVENT_HUB_NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.BY_CLASS_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.BY_CLASS_NPM_TOKEN }}

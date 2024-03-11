@@ -16,6 +16,9 @@
     "prettier/prettier": "error",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/restrict-template-expressions": "off",
-    "@typescript-eslint/explicit-function-return-type": "off"
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-non-null-asserted-optional-chain": "off"
   }
 }
