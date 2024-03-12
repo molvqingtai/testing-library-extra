@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/molvqingtai/testing-library-extra/compare/v1.0.1...v1.0.2) (2024-03-12)
+
+
+### Bug Fixes
+
+* fix dist output path ([a7fcaa5](https://github.com/molvqingtai/testing-library-extra/commit/a7fcaa55fd811120bcae4ae2467617d36a0e6f3c))
+* fix ouput types path ([d0d896f](https://github.com/molvqingtai/testing-library-extra/commit/d0d896fe024500733336b4ec02a4c0fcba6008c3))
+
 ## [1.0.1](https://github.com/molvqingtai/testing-library-extra/compare/v1.0.0...v1.0.1) (2024-03-12)
 
 
