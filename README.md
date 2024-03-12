@@ -1,4 +1,7 @@
 # testing-library-extra
+
+[![version](https://img.shields.io/github/v/release/molvqingtai/testing-library-extra)](https://www.npmjs.com/package/testing-library-extra) [![workflow](https://github.com/molvqingtai/testing-library-extra/actions/workflows/ci.yml/badge.svg)](https://github.com/molvqingtai/testing-library-extra/actions) [![download](https://img.shields.io/npm/dt/testing-library-extra)](https://www.npmjs.com/package/testing-library-extra) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 Add `bySelector` and `byAttribute` to [@testing-library/dom](https://github.com/testing-library/dom-testing-library)
 
 
