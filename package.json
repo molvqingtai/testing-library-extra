@@ -1,6 +1,6 @@
 {
   "name": "testing-library-extra",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add bySelector and byAttribute to @testing-library/dom",
   "main": "dist/index.js",
   "type": "module",
