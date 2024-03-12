@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/molvqingtai/testing-library-extra/compare/v1.0.0...v1.0.1) (2024-03-12)
+
+
+### Bug Fixes
+
+* can not import in some cases ([0b66213](https://github.com/molvqingtai/testing-library-extra/commit/0b6621349201200809e6c19e55c83ccd5e48483b))
+
 # 1.0.0 (2024-03-12)
 
 
