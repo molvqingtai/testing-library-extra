@@ -5,9 +5,9 @@ Add `bySelector` and `byAttribute` to [@testing-library/dom](https://github.com/
 
 ## Why?
 
-The [@testing-library/dom](https://github.com/testing-library/dom-testing-library) manager believes that using `querySelector` API as the escape hatch in the test code is a bad practice.
+The manager of [@testing-library/dom](https://github.com/testing-library/dom-testing-library) believes that using the `querySelector` API as an escape hatch in test code is a bad practice.
 
-But for some special purpose: when automating in browser extensions, it will be extremely difficult without a `css selector`.
+However, for some specific purposes, such as automation in browser extensions, not having CSS selectors would become extremely challenging.
 
 See: [PR (267)](https://github.com/testing-library/dom-testing-library/pull/267)  [issues (512)](https://github.com/testing-library/dom-testing-library/issues/512)
 
