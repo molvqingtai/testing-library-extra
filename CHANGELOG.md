@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/molvqingtai/testing-library-extra/compare/v1.0.3...v1.1.0) (2024-03-13)
+
+
+### Features
+
+* byAttribute API merges MatcherOptions and WaitForOptions ([a7f5b61](https://github.com/molvqingtai/testing-library-extra/commit/a7f5b61934a9219078358b255dfaeb1705110173))
+
 ## [1.0.3](https://github.com/molvqingtai/testing-library-extra/compare/v1.0.2...v1.0.3) (2024-03-12)
 
 
