@@ -128,7 +128,7 @@ describe('Test byAttribute', () => {
     const loginButtonRef = getByAttribute(container, 'class', 'login-button')
     userEvent.click(loginButtonRef)
 
-    const messageRef = await findByAttribute(container, 'class', 'message', undefined, { timeout: 2000 })
+    const messageRef = await findByAttribute(container, 'class', 'message', { timeout: 2000 })
     expect(messageRef.textContent).toBe('Login success')
   })
 
@@ -137,15 +137,9 @@ describe('Test byAttribute', () => {
     const loginButtonRef = getByAttribute(container, 'class', 'login-button')
     userEvent.click(loginButtonRef)
 
-    const [messageRef, closeButtonRef] = await findAllByAttribute(
-      container,
-      'class',
-      /message|close-button/,
-      undefined,
-      {
-        timeout: 2000
-      }
-    )
+    const [messageRef, closeButtonRef] = await findAllByAttribute(container, 'class', /message|close-button/, {
+      timeout: 2000
+    })
     expect(messageRef.textContent).toBe('Login success')
     expect(closeButtonRef.textContent).toBe('close')
   })
