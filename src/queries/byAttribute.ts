@@ -71,22 +71,20 @@ const findAllByAttribute = async <R extends HTMLElement = HTMLElement>(
   container: HTMLElement,
   attribute: string,
   value: Matcher,
-  options?: MatcherOptions,
-  waitForOptions?: WaitForOptions
+  options?: MatcherOptions & WaitForOptions
 ): Promise<R[]> => {
   // @ts-expect-error -- Incorrect derivation of buildQueries internal type
-  return (await _findAllByAttribute(container, value, { ...options, attribute }, waitForOptions)) as R[]
+  return (await _findAllByAttribute(container, value, { ...options, attribute }, options)) as R[]
 }
 
 const findByAttribute = async <R extends HTMLElement = HTMLElement>(
   container: HTMLElement,
   attribute: string,
   value: Matcher,
-  options?: MatcherOptions,
-  waitForOptions?: WaitForOptions
+  options?: MatcherOptions & WaitForOptions
 ): Promise<R> => {
   // @ts-expect-error -- Incorrect derivation of buildQueries internal type
-  return (await _findByAttribute(container, value, { ...options, attribute }, waitForOptions)) as R
+  return (await _findByAttribute(container, value, { ...options, attribute }, options)) as R
 }
 
 export { queryByAttribute, queryAllByAttribute, getAllByAttribute, getByAttribute, findAllByAttribute, findByAttribute }

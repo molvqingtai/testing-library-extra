@@ -89,7 +89,7 @@ const dialogButton = getByAttribute(document.body, 'data-action', /^open/)
 
 userEvent.click(dialogButton)
 
-const dialog = await findByAttribute(document.body, 'data-id', 'dialog', undefined, { timeout: 1000 })
+const dialog = await findByAttribute(document.body, 'data-id', 'dialog', { timeout: 1000 })
 
 const usernameInput = getByAttribute(dialog, 'data-name', 'username')
 const passwordInput = getByAttribute(dialog, 'data-name', 'password')
@@ -105,25 +105,36 @@ userEvent.click(loginButton)
 
 ## Expose API
 
-This project exposes the following api, and the usage is consistent with the original project [@testing-library/dom](https://github.com/testing-library/dom-testing-library) .
+This project exposes the following api, and the usage is consistent with the original project [types-of-queries](https://testing-library.com/docs/queries/about/#types-of-queries).
 
-**BySelector**
+* **BySelector**
 
-* getBySelector
-* getAllBySelector
-* queryBySelector
-* queryAllBySelector
-* findBySelector
-* findAllBySelector
+  + getBySelector
 
-**ByAttribute**
+  * getAllBySelector
 
-* getByAttribute
-* getAllByAttribute
-* queryByAttribute
-* queryAllByAttribute
-* findByAttribute
-* findAllByAttribute
+  * queryBySelector
+
+  * queryAllBySelector
+
+  * findBySelector
+
+  * findAllBySelector
+
+* **ByAttribute**
+
+  * getByAttribute
+
+  * getAllByAttribute
+
+  * queryByAttribute
+
+  * queryAllByAttribute
+
+  * findByAttribute
+
+  * findAllByAttribute
+
 
 
 
