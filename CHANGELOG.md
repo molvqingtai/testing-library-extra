@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/molvqingtai/testing-library-extra/compare/v1.1.0...v1.1.1) (2026-01-19)
+
+
+### Performance Improvements
+
+* upgrade deps & align file structure ([3690e7d](https://github.com/molvqingtai/testing-library-extra/commit/3690e7d6f723f26fafbd5626f15c934e2966cf14))
+
 # [1.1.0](https://github.com/molvqingtai/testing-library-extra/compare/v1.0.3...v1.1.0) (2024-03-13)
 
 
