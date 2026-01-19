@@ -44,7 +44,7 @@ const createExampleDOM = () => {
         dom.appendChild(message)
         clearTimeout(timer)
       },
-      1000
+      500
       // Math.floor(Math.random() * 200)
     )
   })
@@ -81,7 +81,7 @@ describe('Test bySelector', () => {
     const loginButtonRef = getBySelector(container, 'form .login-button')
     userEvent.click(loginButtonRef)
 
-    const messageRef = await findBySelector(container, '.message', { timeout: 2000 })
+    const messageRef = await findBySelector(container, '.message', { timeout: 1000 })
     expect(messageRef.textContent).toBe('Login success')
   })
 
@@ -91,7 +91,7 @@ describe('Test bySelector', () => {
     userEvent.click(loginButtonRef)
 
     const [messageRef, closeButtonRef] = await findAllBySelector(container, '.dialog :is(div, button)', {
-      timeout: 2000
+      timeout: 1000
     })
     expect(messageRef.textContent).toBe('Login success')
     expect(closeButtonRef.textContent).toBe('close')
@@ -128,7 +128,7 @@ describe('Test byAttribute', () => {
     const loginButtonRef = getByAttribute(container, 'class', 'login-button')
     userEvent.click(loginButtonRef)
 
-    const messageRef = await findByAttribute(container, 'class', 'message', { timeout: 2000 })
+    const messageRef = await findByAttribute(container, 'class', 'message', { timeout: 1000 })
     expect(messageRef.textContent).toBe('Login success')
   })
 
@@ -138,7 +138,7 @@ describe('Test byAttribute', () => {
     userEvent.click(loginButtonRef)
 
     const [messageRef, closeButtonRef] = await findAllByAttribute(container, 'class', /message|close-button/, {
-      timeout: 2000
+      timeout: 1000
     })
     expect(messageRef.textContent).toBe('Login success')
     expect(closeButtonRef.textContent).toBe('close')

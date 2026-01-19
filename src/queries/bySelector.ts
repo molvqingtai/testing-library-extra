@@ -1,5 +1,5 @@
 import { type GetErrorFunction, buildQueries, type waitForOptions } from '@testing-library/dom'
-import checkContainerType from '../utils/checkContainerType'
+import checkContainerType from '../helpers/checkContainerType'
 
 const queryAllBySelector = <R extends HTMLElement = HTMLElement>(container: HTMLElement, selector: string) => {
   checkContainerType(container)
