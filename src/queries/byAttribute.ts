@@ -6,7 +6,7 @@ import {
   type MatcherOptions,
   type waitForOptions as WaitForOptions
 } from '@testing-library/dom'
-import checkContainerType from '../utils/checkContainerType'
+import checkContainerType from '../helpers/checkContainerType'
 
 const _queryAllByAttribute = <R extends HTMLElement = HTMLElement>(
   container: HTMLElement,
