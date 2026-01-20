@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/molvqingtai/testing-library-extra/compare/v1.1.2...v1.1.3) (2026-01-20)
+
+
+### Bug Fixes
+
+* trigger npm publish ([48e4d89](https://github.com/molvqingtai/testing-library-extra/commit/48e4d892b5a3e2e4f2848c5d5378cb63ff6da91f))
+
 ## [1.1.2](https://github.com/molvqingtai/testing-library-extra/compare/v1.1.1...v1.1.2) (2026-01-19)
 
 
