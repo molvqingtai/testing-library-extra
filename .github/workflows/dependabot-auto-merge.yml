@@ -1,0 +1,37 @@
+# This workflow enables auto-merge for Dependabot PRs
+# 
+# Prerequisites:
+# 1. Enable "Allow auto-merge" in repository settings
+# 2. Configure branch protection rules to require status checks (CI workflow)
+# 3. The PR will auto-merge once all required checks pass
+#
+# Note: This workflow uses GITHUB_TOKEN which cannot approve PRs.
+# PRs will be auto-merged without explicit approval once checks pass.
+# If approval is required, configure branch protection to require reviews.
+
+name: Dependabot Auto-Merge
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
